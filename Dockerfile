@@ -8,5 +8,5 @@ RUN rm -rf /var/lib/apt/lists/*
 COPY run.sh /run.sh
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /run.sh /entrypoint.sh
-CMD openvpn /config/client.conf
+CMD openvpn /etc/openvpn/client.conf
 ENTRYPOINT /entrypoint.sh
